@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Onderstaand HTML fragment is verkeerd.</p>
+<p>&lt;ul&gt;
+    <br>&lt;li&gt;een&lt;/li&gt;
+    <br>&lt;li&gt;twee&lt;/li&gt;
+    <br>&lt;ol&gt;
+    <br>&lt;li&gt;jan&lt;/li&gt;
+    <br>&lt;li&gt;piet&lt;/li&gt;
+    <br>&lt;li&gt;joris&lt;/li&gt;
+    <br>&lt;/ol&gt;
+    <br>&lt;li&gt;vier&lt;/li&gt;
+    <br>&lt;/ul&gt;
+</p>
+<ul>
+    <li>een</li>
+    <li>twee</li>
+    <ol>
+        <li>jan</li>
+        <li>piet</li>
+        <li>joris</li>
+    </ol>
+    <li>vier</li>
+</ul>
+<p>De &lt;ol&gt; staat buiten een &lt;li&gt;, terwijl dit er niet buiten mag staan.<br>Onderstaand is de verbeterde versie.</p>
+<p>
+    <br>&lt;li&gt;een&lt;/li&gt;
+    <br>&lt;li&gt;twee&lt;/li&gt;
+    <br>&lt;li&gt;drie
+    <br>&lt;ol&gt;
+    <br>&lt;li&gt;jan&lt;/li&gt;
+    <br>&lt;li&gt;piet&lt;/li&gt;
+    <br>&lt;li&gt;joris&lt;/li&gt;
+    <br>&lt;/ol&gt;
+    <br>&lt;/li&gt;
+    <br>&lt;li&gt;vier&lt;/li&gt;
+    <br>&lt;/ul&gt;
+</p>
+<ul>
+    <li>een</li>
+    <li>twee</li>
+    <li>drie
+    <ol>
+        <li>jan</li>
+        <li>piet</li>
+        <li>joris</li>
+    </ol>
+    </li>
+    <li>vier</li>
+</ul>
+</body>
+</html>

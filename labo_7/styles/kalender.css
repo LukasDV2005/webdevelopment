@@ -1,0 +1,33 @@
+table{
+     border-collapse: collapse;
+     width: 16%;
+     margin: auto;
+     border-style: solid;
+     border-color: black;
+     border-width: 5px;
+     overflow: hidden;
+}
+table thead tr{
+     background-color: rgb(170,170,200);
+     font-size: 1.5em
+}
+table tbody tr:first-child td{
+     background-color:   rgb(35,37,70);
+     color:  rgb(200,190,240);
+     text-align: center;
+}
+table tbody tr td{
+     font-size: 1.3em;
+     border-style: dotted;
+     border-width: 1px;
+}
+td:first-child, td:last-child{
+     background-color: rgb(255, 220, 220);
+}
+table tbody tr .andere_maand {
+     background-color: lightgrey;
+     color: grey;
+}
+table tbody tr .vrije_dag {
+     background-color:  rgb(250,120,120);
+}

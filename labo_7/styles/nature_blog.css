@@ -1,0 +1,36 @@
+body {
+    width: 95%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+article {
+    background-color: lightgray;
+    padding-top:1px;
+    margin-top:5px;
+}
+nav {
+    background-color: #2F2F42;
+}
+nav > a{
+    color:lime;
+    font-size:0.8em;
+    text-decoration: none;
+    font-weight:bold;
+}
+article > header > h1 {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+h1 {
+    font-size: 2em;
+}
+section > header {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white;
+    padding-bottom: 20px;
+}
+footer {
+    padding: 0.5em;
+}

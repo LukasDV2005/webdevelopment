@@ -1,0 +1,79 @@
+body {
+    width: 95%;
+    margin: auto;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+}
+#guarantee {
+    margin:30px;
+    padding:20px;
+    color: #444444;
+    background-size: cover;
+    background-color: #a7cece;
+    border: 1px white dotted;
+}
+#guarantee {
+    padding-left: 60px;
+    background-image: url(images/background.gif);
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    text-decoration: none;
+    float: left;
+}
+h1 {
+    color: #007e7e;
+    font-size: 150%;
+}
+h2 {
+    color: #007e7e;
+    font-size: 130%;
+}
+a {
+    color: grey;
+}
+body > article > p > a:hover {
+    background-size: cover;
+    background-color: saddlebrown;
+}
+header {
+    text-align: center;
+}
+header > p {
+
+}
+footer {
+    font-size: 0.6em;
+    clear: both;
+    text-align: center;
+}
+section {
+    box-sizing: border-box;
+    width: 70%;
+    float: left;
+    padding-right: 40px;
+}
+body > article {
+    box-sizing: border-box;
+    width: 30%;
+    float: right;
+    text-align: center;
+    border: 2px solid #a7cece;
+    padding: 20px;
+    background-image: url(images/cocktail.gif);
+    background-size: 60px 60px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+body > article > h1 {
+    color: black;
+}
+body > article > h2 {
+    color: red;
+}
+.italic {
+    font-style: italic;
+}
+.bold {
+    font-weight: bold;
+}

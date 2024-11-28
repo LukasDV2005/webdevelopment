@@ -1,0 +1,19 @@
+article {
+    display: block;
+    border: 1px solid black;
+    margin: 5px 10px;
+    font-size: 1.25em;
+}
+main :nth-child(2n) img {
+    margin: 10px;
+    float: right;
+    display: inline-block;
+}
+main :nth-child(2n+1) img {
+    margin: 10px;
+    float: left;
+    display: inline-block;
+}
+p {
+    display: inline-block;
+}

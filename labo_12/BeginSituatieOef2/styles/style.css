@@ -1,75 +1,98 @@
+*{
+    padding: 10px;
+}
 html {
     background-color: #333;
     font-family: helvetica, sans-serif;
 }
-
-* {
-    padding: 10px;
-}
-
-body {
-    width: auto;
+body{
     margin: 5px;
+    font-size: 1em;
+    background-color: white;
+
 }
-header {
-    background-color: #ddaa00;
-    color: white;
-}
-footer {
-    background-color: #ddaa00;
-    color: white;
-    border-top: 10px solid black;
-}
-nav {
-    background-color: #ccc;
-    padding: 10px 10px;
+header{
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: #ddaa00;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
-nav a {
-    margin: 0 5px;
-    padding: 10px 50px;
-    color: #ddaa00;
-    background-color: white;
-    border: solid black 2px;
-    text-decoration: none;
-
-}
-section {
-    padding-right: 0;
-    padding-left: 0;
-    margin: 5px;
-    background-color: white;
-    text-align: center;
-}
-section a {
-    text-decoration: none;
-    color: grey;
-    border: solid black 1px;
-}
-h1 {
+h1{
     margin: 0;
 }
-main {
-    background-color: grey;
+nav{
+    background-color: #ccc;
+    width: 100%;
+    height: 50px;
+    padding: 5px 2px;
     display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
 }
-@media screen and(min-width: 700px) {
+nav a{
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #ddaa00;
+    width: 15%;
+}
+main{
+    background-color: grey;
+    width: 98%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+section{
+    background-color: white;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 5px;
+    border: 1px solid #333;
+}
+section img{
+    width: 98%;
+    padding: 0;
+}
+section a{
+    text-align: center;
+    display: block;
+    width: 100%;
+    justify-self: center;
+    text-decoration: none;
+    color: gray;
+    height: 25px;
+    border: 1px solid black;
+}
+footer{
+    width: 98%;
+    background-color: #ddaa00;
+    margin: 0 auto;
+}
+footer p{
+    text-align: center;
+    color: white;
+}
 
-    nav {
+@media screen and (min-width:700px){
+    nav{
         font-size: 20px;
-        padding: 15px;
     }
-
-    nav a {
+    nav a{
         width: 18%;
     }
-
-    main {
-        flex-direction: column;
+    main{
+        display: flex;
+        flex-direction: row;
     }
-
-    section {
+    section{
         width: 275px;
     }
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+<form>
+    <div>
+        <label for="firstName"> First name*: </label>
+        <input type="text" id="firstName" name="firstName" placeholder="Your first name" autofocus="autofocus" required="required">
+    </div>
+    <div>
+        <label for="lastName"> Last name*: </label>
+        <input type="text" id="lastName" name="lastName" placeholder="Your last name" required="required">
+    </div>
+    <p>Which sport do you train?</p>
+    <ol>
+        <li>
+            <label for="running">Running </label>
+            <input type="checkbox" id="running" name="sports">
+        </li>
+        <li>
+            <label for="swimming">Swimming </label>
+            <input type="checkbox" id="swimming" name="sports">
+        </li>
+        <li>
+            <label for="rowing">Rowing </label>
+            <input type="checkbox" id="rowing" name="sports">
+        </li>
+    </ol>
+    <p>What is your gender?</p>
+    <ol>
+        <li>
+            <input type="radio" id="male" name="choice">
+            <label for="male"> Male</label>
+        </li>
+        <li>
+            <input type="radio" id="female" name="choice">
+            <label for="female"> Female</label>
+        </li>
+    </ol>
+    <div>
+        <label for="movie">Favorite movie: </label>
+        <input type="text" id="movie" name="movie">
+    </div>
+    <div>
+        <label for="quote">Favorite quote: </label>
+        <input type="text" id="quote" name="quote" placeholder="Write your favorite quote">
+    </div>
+    <div>
+        <label for="password">Password*: </label>
+        <input type="password" id="password" name="password" required="required">
+    </div>
+    <div>
+        <label for="food">Favorite food: </label>
+        <input list="foods" id="food" name="food">
+        <datalist id="foods">
+            <option value="hamburger">
+            <option value="hot dog">
+            <option value="pizza">
+            <option value="penne arabiatta">
+            <option value="chicken wings">
+        </datalist>
+    </div>
+    <div>
+        <input type="file" value="Geen bestand gekozen">
+    </div>
+    <div>
+        <label for="txtEmail">Email adress: </label>
+        <input type="email" id="txtEmail" name="txtEmail">
+    </div>
+    <div>
+        <label for="txtUrl">Favorite site: </label>
+        <input type="url" id="txtUrl" name="txtUrl">
+    </div>
+    <div>
+        <label for="favNumber10">Favorite number between 1-10: </label>
+        <input type="number" min="1" max="10" id="favNumber10" name="favNumber10" value="1">
+    </div>
+    <div>
+        <label for="favNumber1000">Favorite number between 11-1000</label>
+        <input type="range" min="11" max="1000" id="favNumber1000" name="favNumber1000">
+    </div>
+    <div>
+        <label for="date">When were you born? </label>
+        <input type="date" id="date" name="date">
+    </div>
+    <div>
+        <label for="regNumber">Belgium zip-code reg number*: </label>
+        <input type="text" pattern="[0-9]{4}" id="regNumber" name="regNumber" required="required" placeholder="9999">
+    </div>
+    <div>
+        <label for="search">Search for something: </label>
+        <input type="search" id="search" name="search">
+    </div>
+    <div>
+        <label for="colorpicker">What is your favorite color? </label>
+        <input type="color" id="colorpicker" name="colorpicker">
+    </div>
+    <input type="submit">
+</form>
+<script src="scripts/index.js"></script>
+</body>
+</html>

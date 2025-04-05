@@ -14,7 +14,7 @@ const bewaarBewerktePersoon = () => {
 
     let errors = document.getElementsByClassName("errorMessage");
     let error = false;
-    for (let i = 0; i < errors.length; i++) {
+    for (let i = 0; i < errors.length && error === false; i++) {
         if (error === false && errors[i].innerHTML !== "") {
             error = true;
         }
@@ -23,7 +23,7 @@ const bewaarBewerktePersoon = () => {
 
 
     // een nieuw aangemaakte persoon voegen we toe
-    if(error) {
+    if(error === false) {
         
         let txtVoornaam = document.getElementById("txtVoornaam").value;
         let txtFamilienaam = document.getElementById("txtFamilienaam").value;
@@ -41,22 +41,21 @@ const bewaarBewerktePersoon = () => {
 
         if (global.lastClicked === -1) {
 
-
-
             let option = document.createElement("option");
             let i = personen.length;
             option.id = "" + i;
             option.value = persoon.voornaam + " " + persoon.familienaam;
             option.innerText = persoon.voornaam + " " + persoon.familienaam;
-            option.addEventListener("click", clicked)
             let select = document.getElementById("lstPersonen");
             select.appendChild(option)
             personen.push(persoon);
+            global.lastClicked = i;
         } else {
             let i = global.lastClicked;
+            let option = document.getElementById(i)
             personen.splice(i, 1, persoon);
-            option[i].value = persoon.voornaam + " " + persoon.familienaam;
-            option[i].innerText = persoon.voornaam + " " + persoon.familienaam;
+            option.value = persoon.voornaam + " " + persoon.familienaam;
+            option.innerText = persoon.voornaam + " " + persoon.familienaam;
         }
     }
     // een bestaande persoon in de lijst passen we aan
@@ -65,21 +64,37 @@ const bewaarBewerktePersoon = () => {
 
 // Event listener (btnNieuw click)
 const bewerkNieuwePersoon = () => {
+
     console.log("Klik op de knop nieuw");
     global.lastClicked = -1;
-
+    let txtVoornaam = document.getElementById("txtVoornaam");
+    let txtFamilienaam = document.getElementById("txtFamilienaam");
+    let txtGeboortedatum = document.getElementById("txtGeboorteDatum");
+    let txtEmail = document.getElementById("txtEmail");
+    let txtAantalKinderen = document.getElementById("txtAantalKinderen");
+    txtVoornaam.value = "";
+    txtFamilienaam.value = "";
+    txtGeboortedatum.value = "";
+    txtEmail.value = "";
+    txtAantalKinderen.value = "";
 
     // Zet de user interface klaar om de gegevens van een nieuwe persoon in te voeren
 };
 
 toonData = (event) => {
-    let i = event.target.id
-    let json = JSON.stringify(personen[i]);
-    console.log(json);
-}
-
-const clicked = (event) => {
-    event.target.id;
+    let txtVoornaam = document.getElementById("txtVoornaam");
+    let txtFamilienaam = document.getElementById("txtFamilienaam");
+    let txtGeboortedatum = document.getElementById("txtGeboorteDatum");
+    let txtEmail = document.getElementById("txtEmail");
+    let txtAantalKinderen = document.getElementById("txtAantalKinderen");
+    global.lastClicked = document.getElementById("lstPersonen").selectedIndex
+    let i = global.lastClicked;
+    let persoon = personen[i];
+    txtVoornaam.value = persoon.voornaam;
+    txtFamilienaam.value = persoon.familienaam;
+    txtGeboortedatum.value = persoon.geboorteDatum;
+    txtEmail.value = persoon.email;
+    txtAantalKinderen.value = persoon.aantalKinderen;
 }
 
 // onze setup functie die de event listeners registreert

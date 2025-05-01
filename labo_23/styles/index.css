@@ -1,0 +1,23 @@
+body {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+.goBtn {
+    width: 100%;
+    height: 40px;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+#go {
+    background-color: limegreen;
+    color: white;
+}
+#smol {
+    font-size: 0.9em;
+    color: grey;
+    margin-bottom: 20px;
+    margin-top: 2px;
+}
+#history {
+
+}
